@@ -1,0 +1,13 @@
+gatewayLambda:
+    handler: index.handler
+    name: signup-lambda
+    description: Lambda function for signup
+    role: arn:aws:iam::#{AWS::AccountId}:role/lambda_role
+    maximumRetryAttempts: 0
+    events:
+      - http:
+          path: signup
+          method: post
+          cors: true
+          
+
