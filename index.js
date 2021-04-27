@@ -76,6 +76,7 @@ exports.handler = async (event, context) => {
             })
         });
         dbInsertResult = await dbInsert;
+        console.log("dbresult",dbInsertResult);
         // return success response if db insert is successful
         if (dbInsertResult) {
             return {
